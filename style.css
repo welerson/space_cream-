@@ -1,0 +1,260 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --ff-heading: 'Epilogue', sans-serif;
+  --ff-texting: 'Open sans', sans-serif;
+  
+  --hue: 600px;
+  --bg-primary: hsl(var(--hue), 22%, 20%);
+  --fc-primary: hsl(var(--hue), 0%, 100%);
+  --fc-secondary: hsl(var(--hue), 50%, 80%);
+  --fc-secondary-dark: hsl(var(--hue), 100%, 11%, 1);
+
+  font-size: 62.5%;
+  --fs-body: 1.6rem;
+  --fs-heading: clamp(4rem, 1rem + 5vw, 5.6rem);
+  --fs-heading-sm: clamp(3rem, 0.5rem + 3vw, 4rem);
+
+}
+  
+
+body{
+  font-family: var(--ff-texting);
+
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+
+  font-size: var(--fs-body);
+ 
+  height: 720 px;
+  width: 60%;
+ 
+ overflow-x: hidden;
+
+}
+
+body h1{
+  position: absolute;
+  left: 75px;
+  right: 78.89%;
+  top: 246px;
+  bottom: 78.03%;
+  width: 100%;
+  text-transform: uppercase;
+ 
+
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 34px;
+  color: #ffffff;
+}
+
+.colum{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 377px;
+  height: 850px;
+  background-color: #8E9AAF;
+  
+ }
+ 
+.retangle{
+  position: absolute;
+  background-color: #CBC0D3;
+  width: 377px;
+  height: 70px;
+  left: 0px;
+  top: 231px;
+}
+
+body p{
+  position: absolute;
+  width: 275px;
+  height: 262px;
+  top: 333px;
+  left: 54px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+#logo{
+  position: absolute;
+  width: 214px;
+  height: 167px;
+  left: 81px;
+  top: 32px;
+}
+
+.pages{
+  max-width: 33rem;
+ margin: 0 auto;
+}
+
+footer{
+  position: absolute;
+  left: center;
+  right: 21.32%;
+  top: 730px;
+  bottom: 47.3%;
+
+  font-family: 'Open Sans';
+   line-height: 28px;
+  color: #4A4E69;
+  font-size: 1.8rem;
+ }
+
+
+img{
+  width: 100%;
+  height: auto;
+
+  border-radius: 6px;
+}
+
+header{
+
+  display: flex;
+  flex-direction: column;
+
+  
+  margin: 10rem 0 8rem;
+  font-family: var(--ff-heading);
+  
+  text-align: center;
+
+  animation: topdown 900ms;
+  
+}
+
+header p{
+  color: var(--fc-secundary);
+  text-transform: uppercase;
+
+  line-height: 3.2rem;
+  letter-spacing: 3px;
+
+  font-weight: 400;
+
+  margin-bottom: 1.7rem;
+
+}
+
+header h1{
+  font-weight: 800;
+  font-size: var(--fs-heading);
+  line-height: 4.8rem;
+
+}
+
+main{
+  display: grid;
+  gap: 3.2rem;
+
+  animation: downtop 900ms 350ms backwards;
+}
+
+
+.card{
+  position: relative;
+  left: 50rem;
+  right: 60rem;
+  margin-top: -160px;
+  font-family: var(--ff-heading);
+}
+
+.card img{
+  
+  object-fit: cover;
+
+  transition: all 200ms;
+
+  filter: brightness(0.5);
+}
+
+.card img:hover{
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+
+
+
+
+
+@keyframes topdown{
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 1;
+    transform: translateY(15px);
+  } 100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 700px){
+ 
+  .pages{
+    max-width: 117rem;
+    padding: 0 5rem;
+  }
+
+  main{
+    
+    grid-template-columns: 1fr 1fr 1fr;
+   
+   
+  }
+
+ 
+}
+
+@media (min-width: 930px){
+  
+/* grid de grelha linha e colunas, BB seignifica duas áreas da posição b logo a imagem fica maior */
+  main{
+    grid-template-areas: "A  B "
+   "C C D"
+   
+    ;
+    
+  }
+
+
+ 
+} 
+
+
+/* */
+
+.loader-wrapper{
+
+  width: 60px;
+  height: 60px;
+
+  
+}
+
+
+
